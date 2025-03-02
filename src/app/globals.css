@@ -30,3 +30,21 @@ button {
   border-radius: 6px;
   background-color: #f5f5f5;
 }
+
+.border-gradient {
+  border: 10px solid;
+  border-image-slice: 1;
+  border-width: 5px;
+  border-image-source: linear-gradient(
+    270deg,
+    #ffcc70 0%,
+    #c850c0 25%,
+    #4158d0 50%,
+    #c850c0 75%,
+    #ffcc70 100%
+  );
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom-radius: 22px;
+}

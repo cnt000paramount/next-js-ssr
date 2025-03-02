@@ -1,8 +1,9 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { Box } from "@/utils/Box";
+import { ReactNode, useEffect, useState } from "react";
 
-function ClientGreetingsWithUseEffects({ children }: { children: any }) {
+function ClientGreetingsWithUseEffects({ children }: { children: ReactNode }) {
   const [todos, setTodos] = useState([]);
   useEffect(() => {
     const doTheCall = async () => {
@@ -15,14 +16,17 @@ function ClientGreetingsWithUseEffects({ children }: { children: any }) {
   }, []);
 
   return (
-    <>
+    <Box>
+      <span className="font-semibold">
+        Client component with useState and useEffects (use client)
+      </span>
       <div className="text-orange-700">{children} aaaaa</div>
-      <ul className="text-orange-700">
-        {todos.slice(0, 3).map((todo: any) => (
+      <ul className="text-orange-700 text-small">
+        {todos.slice(0, 5).map((todo: { title: string; id: string }) => (
           <li key={todo.id}>{todo.title}</li>
         ))}
       </ul>
-    </>
+    </Box>
   );
 }
 

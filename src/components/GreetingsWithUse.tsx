@@ -1,7 +1,5 @@
-"use client";
-
 import { Box } from "@/utils/Box";
-import { use, useState } from "react";
+import { use } from "react";
 
 type Todo = {
   userId: number;
@@ -10,31 +8,29 @@ type Todo = {
   completed: boolean;
 };
 
-function ClientGreetingsWithUse({
+function GreetingsWithUse({
   children,
   todosPromise,
 }: {
   children: React.ReactNode;
   todosPromise: Promise<Todo[]>;
 }) {
-  const [flag, setFlag] = useState(false);
   const todos = use(todosPromise);
-  const handleSetFlag = () => setFlag(!flag);
 
   return (
     <Box>
       <span className="font-semibold">
-        Client component with use (use client)
+        Server component with use (use client)
       </span>
-      <div className={`${flag ? "text-green-600" : ""}`}>{children}</div>
+      <div>{children}</div>
       <ul className="text-green-600">
         {todos.slice(0, 5).map((todo: Todo) => (
           <li key={todo.id}>{todo.title}</li>
         ))}
       </ul>
-      <button onClick={handleSetFlag}>Click me!</button>
+      <button>X removed on click here</button>
     </Box>
   );
 }
 
-export default ClientGreetingsWithUse;
+export default GreetingsWithUse;

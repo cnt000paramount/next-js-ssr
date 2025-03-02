@@ -1,5 +1,6 @@
 "use client";
 
+import { Box } from "@/utils/Box";
 import { useState } from "react";
 
 function ClientGreetingsWithUseState({
@@ -11,10 +12,13 @@ function ClientGreetingsWithUseState({
   const handleSetFlag = () => setFlag(!flag);
 
   return (
-    <>
+    <Box>
+      <span className="font-semibold">
+        Client component with useState (use client)
+      </span>
       <div className={`${flag ? "text-red-500" : ""}`}>{children}</div>
       <button onClick={handleSetFlag}>Click me!</button>
-    </>
+    </Box>
   );
 }
 
