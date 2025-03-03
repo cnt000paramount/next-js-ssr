@@ -19,9 +19,7 @@ function GreetingsWithUse({
 
   return (
     <Box>
-      <span className="font-semibold">
-        Server component with use (use client)
-      </span>
+      <span className="font-semibold">Server component with use</span>
       <div>{children}</div>
       <ul className="text-green-600">
         {todos.slice(0, 5).map((todo: Todo) => (

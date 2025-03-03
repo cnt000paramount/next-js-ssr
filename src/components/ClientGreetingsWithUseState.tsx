@@ -13,9 +13,7 @@ function ClientGreetingsWithUseState({
 
   return (
     <Box>
-      <span className="font-semibold">
-        Client component with useState (use client)
-      </span>
+      <span className="font-semibold">Client component with useState</span>
       <div className={`${flag ? "text-red-500" : ""}`}>{children}</div>
       <button onClick={handleSetFlag}>Click me!</button>
     </Box>

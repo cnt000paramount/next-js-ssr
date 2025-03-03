@@ -18,7 +18,7 @@ function ClientGreetingsWithUseEffects({ children }: { children: ReactNode }) {
   return (
     <Box>
       <span className="font-semibold">
-        Client component with useState and useEffects (use client)
+        Client component with useState and useEffects
       </span>
       <div className="text-orange-700">{children} aaaaa</div>
       <ul className="text-orange-700 text-small">

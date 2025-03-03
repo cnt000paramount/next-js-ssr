@@ -6,7 +6,7 @@ import { ReactNode } from "react";
 function ClientGreetings({ children }: { children: ReactNode }) {
   return (
     <Box>
-      <span className="font-semibold">Client component (use client)</span>
+      <span className="font-semibold">Client component</span>
       <div>{children}</div>
     </Box>
   );

@@ -8,9 +8,7 @@ async function AsyncGreetings({ children }: { children: ReactNode }) {
   const posts = await response.json();
   return (
     <Box>
-      <span className="font-semibold">
-        Async Server component
-      </span>
+      <span className="font-semibold">Async Server component</span>
       <div>
         {posts.slice(0, 5).map((post: { id: string; title: string }) => (
           <div key={post.id}>{post.title}</div>
