@@ -16,7 +16,7 @@ export default function Ssr() {
       </noscript>
 
       <div>
-        <div className="font-bold underline underline-offset-2 text-amber-600 mt-8 pt-4 border-t-2 border-t-amber-600">
+        <div className="font-bold text-amber-600 mt-8 pt-4 border-t-2 border-t-amber-600">
           Server component with children
         </div>
         <Greetings>Hello world from Greetings compo</Greetings>
@@ -24,7 +24,7 @@ export default function Ssr() {
           <Greetings>(Nested with himself)</Greetings>
         </Greetings>
 
-        <div className="font-bold underline underline-offset-2 text-amber-600 mt-8 pt-4 border-t-2 border-t-amber-600">
+        <div className="font-bold text-amber-600 mt-8 pt-4 border-t-2 border-t-amber-600">
           Simple client component with children
         </div>
         <ClientGreetings>
@@ -34,7 +34,7 @@ export default function Ssr() {
           <ClientGreetings>(Nested with himself)</ClientGreetings>
         </ClientGreetings>
 
-        <div className="font-bold underline underline-offset-2 text-amber-600 mt-8 pt-4 border-t-2 border-t-amber-600">
+        <div className="font-bold text-amber-600 mt-8 pt-4 border-t-2 border-t-amber-600">
           Client component with use (promise as prop)
         </div>
         <ClientGreetingsWithUse todosPromise={todosPromise()}>
@@ -43,7 +43,7 @@ export default function Ssr() {
           </ClientGreetingsWithUse>
         </ClientGreetingsWithUse>
 
-        <div className="font-bold underline underline-offset-2 text-amber-600 mt-8 pt-4 border-t-2 border-t-amber-600">
+        <div className="font-bold text-amber-600 mt-8 pt-4 border-t-2 border-t-amber-600">
           Client component with use and Suspense (promise as prop)
         </div>
         <Suspense fallback={<div>Loading...</div>}>
@@ -52,7 +52,7 @@ export default function Ssr() {
           </ClientGreetingsWithUse>
         </Suspense>
 
-        <div className="font-bold underline underline-offset-2 text-amber-600 mt-8 pt-4 border-t-2 border-t-amber-600">
+        <div className="font-bold text-amber-600 mt-8 pt-4 border-t-2 border-t-amber-600">
           Server component with use and Suspense (promise as prop)
         </div>
         <Suspense fallback={<div>Loading...</div>}>
@@ -61,14 +61,14 @@ export default function Ssr() {
           </GreetingsWithUse>
         </Suspense>
 
-        <div className="font-bold underline underline-offset-2 text-amber-600 mt-8 pt-4 border-t-2 border-t-amber-600">
+        <div className="font-bold text-amber-600 mt-8 pt-4 border-t-2 border-t-amber-600">
           Client component with useState
         </div>
         <ClientGreetingsWithUseState>
           Hello world from CLIENT Greetings compo with useState
         </ClientGreetingsWithUseState>
 
-        <div className="font-bold underline underline-offset-2 text-amber-600 mt-8 pt-4 border-t-2 border-t-amber-600">
+        <div className="font-bold text-amber-600 mt-8 pt-4 border-t-2 border-t-amber-600">
           Client component with useState and useEffects
         </div>
         <ClientGreetingsWithUseEffects>
