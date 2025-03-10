@@ -9,40 +9,33 @@ export default async function Rsc() {
   await sleep(3000);
   const todos = await response.json();
   return (
-    <>
-      <noscript className="font-bold text-red-800 text-lg font-mono">
-        <div>_________________________________</div>
-        <div>_________ JS IS DISABLED _________</div>
-      </noscript>
+    <Box>
+      <div className="font-bold text-amber-600 mt-8 pt-4 border-t-2 border-t-amber-600">
+        Async Server component with fetch (with 3s delay, waited before reply to
+        the user)
+      </div>
+      <ol className="p-4">
+        <Suspense fallback={<div>Loading...</div>}>
+          <Greetings>
+            {todos.slice(0, 5).map((todo: { id: string; title: string }) => (
+              <li key={todo.id}>{todo.title}</li>
+            ))}
+          </Greetings>
+        </Suspense>
+      </ol>
 
-      <Box>
-        <div className="font-bold text-amber-600 mt-8 pt-4 border-t-2 border-t-amber-600">
-          Async Server component with fetch (with 3s delay, waited before reply
-          to the user)
-        </div>
-        <ol className="p-4">
-          <Suspense fallback={<div>Loading...</div>}>
-            <Greetings>
-              {todos.slice(0, 5).map((todo: { id: string; title: string }) => (
-                <li key={todo.id}>{todo.title}</li>
-              ))}
-            </Greetings>
-          </Suspense>
-        </ol>
-
-        <div className="font-bold text-amber-600 mt-8 pt-4 border-t-2 border-t-amber-600">
-          Async Server component with fetch (with 3s delay, waited after the
-          server reply arrives)
-        </div>
-        <ol className="p-4">
-          <Suspense fallback={<div>Loading...</div>}>
-            <AsyncGreetings>
-              Hello world from Async Greetings compo
-            </AsyncGreetings>
-          </Suspense>
-        </ol>
-        <div>ANOTHER DIV</div>
-      </Box>
-    </>
+      <div className="font-bold text-amber-600 mt-8 pt-4 border-t-2 border-t-amber-600">
+        Async Server component with fetch (with 3s delay, waited after the
+        server reply arrives)
+      </div>
+      <ol className="p-4">
+        <Suspense fallback={<div>Loading...</div>}>
+          <AsyncGreetings>
+            Hello world from Async Greetings compo
+          </AsyncGreetings>
+        </Suspense>
+      </ol>
+      <div>ANOTHER DIV</div>
+    </Box>
   );
 }

@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Link from "next/link";
 import { Suspense } from "react";
+import { Menu } from "@/components/Menu";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -30,16 +30,12 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased p-2`}
       >
         <div className="pb-2 mb-4 border-gradient font-bold text-lg underline">
-          {" "}
-          <ul>
-            <li>
-              <Link href="/ssr">Go to /ssr</Link>
-            </li>
-            <li>
-              <Link href="/rsc">Go to /rsc</Link>
-            </li>
-          </ul>
+          <Menu />
         </div>
+        <noscript className="font-bold text-red-800 text-lg font-mono">
+          <div>_________________________________</div>
+          <div>_________ JS IS DISABLED _________</div>
+        </noscript>
         <Suspense fallback={<div>Loading...</div>}>{children}</Suspense>
       </body>
     </html>

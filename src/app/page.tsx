@@ -1,17 +1,10 @@
-import Link from "next/link";
+import { Menu } from "@/components/Menu";
 
 export default function Home() {
   return (
     <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
       <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <ul>
-          <li>
-            <Link href="/ssr">/ssr - Server side rendering test page</Link>
-          </li>
-          <li>
-            <Link href="/rsc">/rsc - React server component test page</Link>
-          </li>
-        </ul>
+        <Menu />
       </main>
     </div>
   );
