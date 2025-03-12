@@ -1,3 +1,9 @@
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: 'errors',
+};
+
 export default function Error() {
   async function createServerAction(formData: FormData) {
     "use server";

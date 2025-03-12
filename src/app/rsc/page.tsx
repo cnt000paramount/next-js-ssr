@@ -2,7 +2,12 @@ import AsyncGreetings from "@/components/AsyncGreetings";
 import Greetings from "@/components/Greetings";
 import { Box } from "@/utils/Box";
 import { sleep } from "@/utils/sleep";
+import { Metadata } from "next";
 import { Suspense } from "react";
+
+export const metadata: Metadata = {
+  title: "RSC",
+};
 
 export default async function Rsc() {
   const response = await fetch("https://jsonplaceholder.typicode.com/todos");

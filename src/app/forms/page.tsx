@@ -3,6 +3,11 @@
 import Image from "next/image";
 import { useActionState } from "react";
 import { createServerAction } from "./actions";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "forms",
+};
 
 export default function Forms() {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any

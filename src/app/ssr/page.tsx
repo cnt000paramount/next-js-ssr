@@ -6,6 +6,11 @@ import ClientGreetingsWithUseState from "@/components/ClientGreetingsWithUseStat
 import Greetings from "@/components/Greetings";
 import GreetingsWithUse from "@/components/GreetingsWithUse";
 import { todosPromise } from "@/utils/todoPromise";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "SSR",
+};
 
 export default function Ssr() {
   return (
