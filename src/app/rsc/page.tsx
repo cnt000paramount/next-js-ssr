@@ -2,8 +2,10 @@ import AsyncGreetings from "@/components/AsyncGreetings";
 import Greetings from "@/components/Greetings";
 import { Box } from "@/utils/Box";
 import { sleep } from "@/utils/sleep";
-import { Metadata } from "next";
+import Metadata from "next";
 import { Suspense } from "react";
+
+export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
   title: "RSC",
@@ -15,6 +17,7 @@ export default async function Rsc() {
   const todos = await response.json();
   return (
     <Box>
+      <div>force-dynamic directive for production</div>
       <div className="font-bold text-amber-600 mt-8 pt-4 border-t-2 border-t-amber-600">
         Async Server component with fetch (with 3s delay, waited before reply to
         the user)
