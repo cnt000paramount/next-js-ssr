@@ -2,7 +2,7 @@ import AsyncGreetings from "@/components/AsyncGreetings";
 import Greetings from "@/components/Greetings";
 import { Box } from "@/utils/Box";
 import { sleep } from "@/utils/sleep";
-import Metadata from "next";
+import { Metadata } from "next";
 import { Suspense } from "react";
 
 export const dynamic = "force-dynamic";
